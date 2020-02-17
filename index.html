@@ -19,45 +19,53 @@
 <link rel="mask-icon" href="resources/images/common/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="resources/images/common/favicons/favicon.ico">
 <meta name="theme-color" content="#563d7c">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+<!--[if lt IE 9]>
+    <script src="/bundles/ckgsservice/js/ie/html5shiv.js"></script>
+    <script src="/bundles/ckgsservice/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="resources/js/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body class="sidenavOpend">
 <header>
-<div class="navbar navbar-dark bg-dark shadow-sm">
+<div class="navbar">
     <a href="#" class="navbar-brand d-flex align-items-center"><img src="resources/images/common/logo.png" alt=""></a>
-    <div class="collapse bg-dark" id="navbarHeader">
+    <div class="sidenavWrap bg-dark" id="navbarHeader">
         <div class="sidenav">
             <ul>
-                <li><a href="#"><i class="fa-home"></i> DashBoard</a></li>
-                <li><a href="#"><i class="fa-user-plus"></i> DashBoard</a></li>
-                <li><a href="#"><i class="fa-list-thumb"></i> DashBoard</a></li>
-                <li><a href="#"><i class="fa-map-marker"></i> DashBoard</a></li>
-                <li><a href="#"><i class="fa-info"></i> DashBoard</a></li>
+                <li><a href="#"><i class="fc-home"></i> DashBoard</a></li>
+                <li><a href="#"><i class="fc-user-plus"></i> New Meeting</a></li>
+                <li><a href="#"><i class="fc-list-thumb"></i> Document MOM</a></li>
+                <li><a href="#"><i class="fc-map-marker"></i> Track MOM</a></li>
+                <li><a href="#"><i class="fc-info"></i> About</a></li>
             </ul>
-            <a href="#"><i class="fa-copy"></i> Copyright</a>
+            <span class="d-flex align-items-center copy-txt"><i class="fc-copy"></i> Copyright</span>
         </div>
     </div>
     <div class="top-nav">
-      <div class="container d-flex justify-content-between">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <div class="container fluid d-flex">
+        <button class="navbar-toggler" type="button" class="openbtn" onclick="openNav()">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="searchi-input-sec">
+        <div class="search-input-sec">
           <div class="form-group">
-                <button type="button" class="btn btn-primary"><i class="fa-search"></i></button>
+                <button type="button" class="btn"><i class="fc-search dark"></i></button>
                 <input type="text" value="" placeholder="Search Minutes, Action Items">
             </div>
         </div>
-        <ul class="navigation-mid">
-            <li><a href="#"><i class="fa-home"></i></a></li>
-            <li><a href="#"><i class="fa-user-plus"></i></a></li>
-            <li><a href="#"><i class="fa-list-thumb"></i></a></li>
-            <li><a href="#"><i class="fa-map-marker"></i></a></li>
-            <li><a href="#"><i class="fa-info"></i></a></li>
+        <ul class="navigation mid">
+            <li><a href="#"><i class="fc-home dark"></i></a></li>
+            <li><a href="#"><i class="fc-user-plus dark"></i></a></li>
+            <li><a href="#"><i class="fc-list-thumb dark"></i></a></li>
+            <li><a href="#"><i class="fc-map-marker dark"></i></a></li>
         </ul>
-        <ul class="navigation-right">
-            <li><a href="#"><i class="fa-info"></i></a></li>
-            <li><a href="#"><i class="fa-bell"><span>4</span></i></a></li>
-            <li><a href="#" class="fa-user"></a></li>
+        <ul class="navigation right">
+            <li><a href="#" class="info-btn"><i class="fc-info dark"></i></a></li>
+            <li><a href="#" class="notification-btn"><i class="fc-bell dark"><span>4</span></i></a></li>
+            <li><a href="#" class="profile-btn fc-user"><img src="resources/images/common/user-profile.png" alt="user image"></a></li>
         </ul>
       </div>
   </div>
@@ -65,7 +73,7 @@
 </header>
 
 <main role="main">
-    <section class="jumbotron">
+    <section class="">
         <div class="container">
             <div class="head-txt text-center">
                 <h1>Minutes of Meeting</h1>
@@ -73,35 +81,35 @@
             </div>
 
             <h2>My Dashboard</h2>
-            <div class="row">
+            <div class="row dashboard-box">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm bg-primary">
-                        <div class="card-header">
+                        <div class="card-header justify-content-between">
                             <h2>Past Meetings</h2>
                             <div class="sec-rt">
                                 <b>11</b>
-                                <a href="#" class="btn btn-action"><i class="fa-user-plus"></i></a>
+                                <a href="#" class="btn btn-action"><i class="fc-user-plus"></i></a>
                             </div>
                         </div>
                         <div class="card-body">
                           <ul>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
                             </li>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
                             </li>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
@@ -112,32 +120,32 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm bg-success">
-                        <div class="card-header">
+                        <div class="card-header justify-content-between">
                             <h2>Past Meetings</h2>
                             <div class="sec-rt">
                                 <b>11</b>
-                                <a href="#" class="btn btn-action"><i class="fa-user-plus"></i></a>
+                                <a href="#" class="btn btn-action"><i class="fc-user-plus"></i></a>
                             </div>
                         </div>
                         <div class="card-body">
                           <ul>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
                             </li>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
                             </li>
                             <li>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="card-thumb"></div>
+                                    <div class="card-thumb"><img src="resources/images/common/user-profile.png" alt=""></div>
                                     <div class="card-text"><b>SST Tech Solutions</b> Marketing Team Meeting</div>
                                     <small class="text-muted">02/02/2020 2:30 PM</small>
                                 </div>
@@ -148,11 +156,11 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm bg-danger">
-                        <div class="card-header">
+                        <div class="card-header justify-content-between">
                             <h2>Past Meetings</h2>
                             <div class="sec-rt">
                                 <b>11</b>
-                                <a href="#" class="btn btn-action"><i class="fa-user-plus"></i></a>
+                                <a href="#" class="btn btn-action"><i class="fc-user-plus"></i></a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -187,7 +195,7 @@
             <div class="row">
                 <div class="col-sm-6">
                   <div class="card">
-                    <h5 class="card-header">Notifications</h5>
+                    <h5 class="card-header"><i class="fc-bell dark"></i> Notifications</h5>
                     <div class="card-body">
                       <ul>
                         <li>
@@ -215,7 +223,7 @@
                 </div>
                   <div class="col-sm-6">
                     <div class="card">
-                      <h5 class="card-header">MOM Features</h5>
+                      <h5 class="card-header"><i class="fc-paper-plane dark"></i> MOM Features</h5>
                       <div class="card-body">
                         <ul>
                           <li>
@@ -246,5 +254,21 @@
 <script>window.jQuery || document.write('<script src="resources/js/jquery.slim.min.js"><\/script>')</script>
 <script src="resources/js/jquery.slim.min.js"></script>
 <script src="resources/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+
+document.querySelector(".openbtn").addEventListener("toggle", openNav);
+
+function openNav(){    
+    document.querySelector("body").classList.toggle("sidenavOpend");
+    //document.querySelector(".sidenavWrap").style.width = "220px";
+    //document.querySelector("body").style.marginLeft = "220px";
+    //document.querySelector(".navbar-brand").style.marginLeft = "-220px";
+}
+// Tpheader = document.querySelector('.top-nav');
+// Sidenav= document.querySelector('.sidenavWrap');
+// NavbarBrand = document.querySelector('.navbar-brand');
+
+// elemHeight = Tpheader.offsetHeight; 
+</script>
 </body>
 </html>
