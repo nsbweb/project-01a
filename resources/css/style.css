@@ -50,6 +50,39 @@ body { font-family:'Ambit', Arial, Helvetica, sans-serif; font-size: 14px; backg
 .container.fluid { width:100%; max-width: none; }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 /* header .navbar .container { justify-content:flex-start; } */
+
+/* General button style (reset) */
+.anim-btn, 
+.sidenav > ul > li > a, 
+header .top-nav ul.navigation > li > a { border: none; font-family: inherit; font-size: inherit; color: inherit; background: none; cursor: pointer; padding: 25px 80px; display: inline-block; margin: 15px 30px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; outline: none; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+
+.anim-btn:after, 
+.sidenav > ul > li > a:after, 
+header .top-nav ul.navigation > li > a::after { content: ''; position: absolute; z-index: -1; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s;}
+
+/* Button Anim SlidefromLef */
+.btn-1c:after, 
+.sidenav > ul > li > a:after,
+header .top-nav ul.navigation > li > a:after { width: 0%; height: 100%; top: 0; left: 0; background: #fff; }
+
+.btn-1c:hover,
+.btn-1c:active, 
+.sidenav > ul > li > a:hover, 
+.sidenav > ul > li > a:active, 
+header .top-nav ul.navigation > li > a:hover, 
+header .top-nav ul.navigation > li > a:active { color: #0e83cd;}
+
+.btn-1c:hover:after,
+.btn-1c:active:after,
+.sidenav > ul > li > a:hover:after,
+.sidenav > ul > li > a:active:after,
+header .top-nav ul.navigation > li > a:hover:after,
+header .top-nav ul.navigation > li > a:active:after { width: 100%;}
+
+.sidenav > ul > li > a, header .top-nav ul.navigation > li > a { padding: 0; margin: 0; }
+header .top-nav ul.navigation > li > a:after { background: #515151;}
+/* Button Anim SlidefromLef */
+
 header .navbar { padding: 0; }
 header .navbar .navbar-brand { position: fixed; left: 0; top: 0; z-index: 3; margin: 0; padding: 0; min-width: 220px; text-align: center; margin: 16px 0; }
 header .navbar .navbar-brand > img { margin: 0 auto; }
@@ -63,13 +96,7 @@ body.sidenavOpend .sidenavWrap { width:220px; }
 .sidenav > ul { display: inline-block; padding: 0; margin: 0; list-style: none; width: 100%; }
 .sidenav > ul > li { display: block; }
 .sidenav > ul > li > a { display: block; padding:13px 20px; font-size: 1em; color: #fff; }
-.sidenav > ul > li > a:hover { background: #fff;  color:#181f2c; text-decoration: none;}
-.sidenav > ul > li > a:hover .fc-home:before { background-image: url(../images/common/icons/fc-home-d.png); }
-.sidenav > ul > li > a:hover .fc-user-plus:before { background-image: url(../images/common/icons/fc-user-plus-d.png); }
-.sidenav > ul > li > a:hover .fc-list-thumb:before { background-image: url(../images/common/icons/fc-list-thumb-d.png); }
-.sidenav > ul > li > a:hover .fc-map-marker:before { background-image: url(../images/common/icons/fc-map-marker-d.png); }
-.sidenav > ul > li > a:hover .fc-info:before { background-image: url(../images/common/icons/fc-info-d.png); }
-
+.sidenav > ul > li > a:hover { /*background: #fff;*/ color:#181f2c; text-decoration: none;}
 .copy-txt { position: absolute; bottom: 0;  left: 0; right:0; text-align: center; color: #fff; }
 
 header .top-nav { background:#fff; position:fixed; left:calc(0px + 0px); right: 0; top:0; z-index: 1; transition: 0.5s; padding-top: 4px; padding-bottom: 4px; }
@@ -98,11 +125,40 @@ header .top-nav ul.navigation > li > a { display: inline-block; padding: 8px ; m
 .navbar-toggler > .navbar-toggler-icon:before { top: -8px; }
 .navbar-toggler > .navbar-toggler-icon:after { bottom: -8px; }
 
-.dashboard-box .card { color: #ffffff; }
+.dashboard-box .card { color: #ffffff; height: calc(100% - 1.5rem); }
 .dashboard-box .card .card-header { border-bottom-color:transparent ; background-color: transparent; }
 .dashboard-box .card .card-header h2 { font-size:1.714em; margin: 0;}
+.dashboard-box .card .card-header .sec-rt > .btn-action { padding: 0.05em; border: 0; outline: 0;}
+.dashboard-box .card .card-header,
+.dashboard-box .card .card-body { padding: 0.75rem; }
 .dashboard-box .card .card-header + .card-body { padding-top: 0; }
-.dashboard-box .card .card-body > ul { display: inline-block; list-style: none; padding: 0; margin: 0;  }
-.dashboard-box .card .card-body > ul > li {  }
+.dashboard-box .card .card-body > ul { display: inline-block; list-style: none; padding: 0; margin: 0; width: 100%;  }
+.dashboard-box .card .card-body > ul > li + li { padding-top: 16px; }
 .dashboard-box .card .card-body > ul > li .text-muted { font-size: 0.929em; color: #fff !important; }
+.dashboard-box .card .card-body > ul > li .text-muted > span { display: block;}
 .dashboard-box .card .card-body .card-text > b { display: block; }
+
+ul.list-def { display: inline-block; list-style: none; padding: 0; margin: 0; width:100%; }
+ul.list-def > li { display: block; padding-left: 2.2em; position: relative; }
+ul.list-def > li + li { margin-top: 1em;; }
+ul.list-def > li .card-text,
+ul.list-def > li .text-muted { font-size: 1.143em }
+ul.list-def > li:before { content: ''; display: block;  position: absolute; left: 0; top:calc(50% - 0.7em); width: 2.2em; height: 1.4em; background-repeat: no-repeat; background-position: left top; background-size: contain; }
+ul.list-def.chat li:before { background-image: url(../images/common/icons/fc-chat-g.png); }
+ul.list-def.hand li:before { background-image: url(../images/common/icons/fc-hand-point-right-g.png); }
+ul.list-def + .btn { margin-top: 1em; margin-left: 2.2em; background: #ff5a00; font-size: 1.143em; font-weight: bold; border-radius: 0; border: 0; outline: 0; padding: 0.4em 0.8em 0.2em; }
+
+/* Code Needed if we use images as icons */
+.sidenav > ul > li > a:hover .fc-home:before { background-image: url(../images/common/icons/fc-home-d.png); }
+.sidenav > ul > li > a:hover .fc-user-plus:before { background-image: url(../images/common/icons/fc-user-plus-d.png); }
+.sidenav > ul > li > a:hover .fc-list-thumb:before { background-image: url(../images/common/icons/fc-list-thumb-d.png); }
+.sidenav > ul > li > a:hover .fc-map-marker:before { background-image: url(../images/common/icons/fc-map-marker-d.png); }
+.sidenav > ul > li > a:hover .fc-info:before { background-image: url(../images/common/icons/fc-info-d.png); }
+
+header .top-nav ul.navigation > li > a:hover .fc-home:before { background-image: url(../images/common/icons/fc-home.png); }
+header .top-nav ul.navigation > li > a:hover .fc-user-plus:before { background-image: url(../images/common/icons/fc-user-plus.png); }
+header .top-nav ul.navigation > li > a:hover .fc-list-thumb:before { background-image: url(../images/common/icons/fc-list-thumb.png); }
+header .top-nav ul.navigation > li > a:hover .fc-map-marker:before { background-image: url(../images/common/icons/fc-map-marker.png); }
+header .top-nav ul.navigation > li > a:hover .fc-info:before { background-image: url(../images/common/icons/fc-info.png); }
+header .top-nav ul.navigation > li > a:hover .fc-bell:before { background-image: url(../images/common/icons/fc-bell.png); }
+/* Code Needed if we use images as icons */
